@@ -3,29 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Web sitemizdeki en son teknoloji haberleri ve ipuçları.">
+    <meta name="keywords" content="teknoloji, haber, ipucu, web geliştirme">
+    <meta name="author" content="Salih TANRISEVEN">
+    <meta name="last-modified" content="2024-09-20">
     <title>Ana Sayfa</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
 <body>
     <header>
-        <div class="logo"><a href="index.html"><img src="logo.png" alt="Site Logosu"></a></div>   <!--Logo oluşturulacak-->
-        <nav class="desktop-menu">
-            <ul>
-                <li><a href="#home">Ana Sayfa</a></li>
-                <li><a href="#about">Hakkımızda</a></li>
-                <li><a href="#services">Hizmetler</a></li>
-                <li><a href="#contact">İletişim</a></li>
-            </ul>
-        </nav>
+        <div class="logo">
+            <a href="index.html">
+                <img src="logo.png" alt="Site Logosu">
+                <h1>Site Adı</h1>
+            </a>
+        </div>
         <div class="search-bar">
             <input type="text" placeholder="Ara...">
             <button type="submit">Ara</button>
         </div>
-        <div class="mobile-menu">
-            <button id="hamburger-menu">&#9776;</button>
-        </div>
-        <button id="theme-toggle">Tema Değiştir</button>
+        <nav class="menu">
+            <button id="menu-toggle">☰</button>
+            <ul id="menu-items">
+                <li><a href="#technology">Teknoloji</a></li>
+                <li><a href="#programs">Programlar</a></li>
+                <li><a href="#about">Hakkımızda</a></li>
+            </ul>
+        </nav>
+
+        <button id="theme-toggle"><img src="tema.png" alt=""></button>
     </header>
 </body>
 </html>

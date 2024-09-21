@@ -1,56 +1,93 @@
+/* Genel stil ayarları */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Times New Roman', Times, serif;
     margin: 0;
     padding: 0;
+    background-color: floralwhite;
     transition: background-color 0.3s, color 0.3s;
 }
 
+/* Başlık çubuğu (header) */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #add8e6; /* Tatlı açık mavi */
-    padding: 10px 20px;
     flex-wrap: wrap;
+    background-color: burlywood;
+    padding: 5px 10px;
+    margin: 15px;
+    border-radius: 10px;
+}
+
+.logo {
+    display: flex;
 }
 
 .logo img {
+    display: block;
     height: 50px;
+    border-radius: 100%;
 }
 
+.logo h1 {
+    display: none;
+}
+
+/* Arama çubuğu */
 .search-bar {
     display: flex;
-    align-items: center;
-    flex-grow: 1;
-    justify-content: center;
+    height: 38px;
 }
 
 .search-bar input {
     padding: 5px;
-    border-radius: 15px 0 0 15px;
+    border-radius: 5px 0 0 5px;
     border: 1px solid #ccc;
 }
 
 .search-bar button {
     padding: 5px 10px;
-    border-radius: 0 15px 15px 0;
+    border-radius: 0 5px 5px 0;
     border: 1px solid #ccc;
     background-color: #fff;
     cursor: pointer;
 }
 
-.desktop-menu ul {
+/* Menü */
+.menu {
+    position: relative;
+}
+
+#menu-toggle {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#menu-items {
+    display: flex;
+    top: 30px;
+    left: 0;
+    background-color: white;
+    list-style: none;
+    padding: 0;
+    border-radius: 5px;
+}
+
+#menu-items li {
+    padding: 10px;
+}
+
+.menu ul {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
 }
 
-.desktop-menu li {
-    margin-left: 20px;
-}
-
-.desktop-menu a {
+.menu a {
     text-decoration: none;
     color: #000;
     padding: 5px 10px;
@@ -58,22 +95,26 @@ header {
     transition: background-color 0.3s;
 }
 
-.desktop-menu a:hover {
-    background-color: #87ceeb; /* Daha koyu mavi */
+.menu a:hover {
+    background-color: burlywood; /* Daha koyu mavi */
 }
 
-.mobile-menu {
-    display: none;
-}
 
+/* Tema değiştirme düğmesi */
 #theme-toggle {
-    padding: 5px 10px;
+    height: 38px;
+    width: 38px;
+    padding: 5px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     background-color: #fff;
     color: #000;
     transition: background-color 0.3s, color 0.3s;
+}
+
+#theme-toggle img {
+    max-width: 100%;
 }
 
 /* Koyu tema */
@@ -106,10 +147,11 @@ body.dark #theme-toggle {
 
 /* Mobil görünüm için medya sorgusu */
 @media (max-width: 768px) {
-    .desktop-menu {
-        display: none;
-    }
-    .mobile-menu {
+    #menu-toggle {
         display: block;
+    }
+
+    #menu-items {
+        display: none;
     }
 }
